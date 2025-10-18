@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>courses</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.jsp" class="logo">Learnova.</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+        <img src="abt7.jpeg" class="image" alt="" />
+    <h3 class="name"><%= session.getAttribute("userName") %></h3>
+    <p class="role">student</p>
+        <a href="profile.jsp" class="btn">view profile</a>
+        <div class="flex-btn">
+          <a href="login.jsp" class="option-btn">login</a>
+          <a href="register.jsp" class="option-btn">register</a>
+        </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+    <img src="abt7.jpeg" class="image" alt="" />
+    <h3 class="name"><%= session.getAttribute("userName") %></h3>
+    <p class="role">student</p>
+    <a href="profile.jsp" class="btn">view profile</a>
+  </div>
+
+   <nav class="navbar">
+      <a href="home.jsp"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="about.jsp"><i class="fas fa-question"></i><span>about</span></a>
+      <a href="courses.jsp"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+      <a href="teachers.jsp"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
+      <a href="contact.jsp"><i class="fas fa-headset"></i><span>contact us</span></a>
+   </nav>
+
+</div>
+
+<section class="courses">
+
+   <h1 class="heading">our courses</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="tutor">
+            <img src="abt8.jpeg" alt="" />
+            <div>
+              <h3>Daniel Martinez</h3>
+              <span>21-10-2023</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="thumb-1.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete HTML tutorial</h3>
+         <a href="playlist.jsp" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="abt9.jpeg" alt="" />
+            <div>
+              <h3>Elina Sen</h3>
+              <span>21-10-2023</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="thumb-2.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete CSS tutorial</h3>
+         <a href="playlist1.jsp" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="abt11.jpeg" alt="" />
+            <div>
+              <h3>Olivia Smith</h3>
+              <span>20-10-2023</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="thumb-3.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete JS tutorial</h3>
+         <a href="playlist2.jsp" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="abt12.jpeg" alt="" />
+            <div>
+              <h3>Sophia Johnson</h3>
+              <span>20-09-2023</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="thumb-4.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete Boostrap tutorial</h3>
+         <a href="playlist3.jsp" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+                <img src="abt9.jpeg" alt="" />
+                <div>
+                  <h3>Emma Williams</h3>
+                  <span>23-09-2023</span>
+                </div>
+         </div>
+         <div class="thumb">
+            <img src="thumb-5.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete JQuery tutorial</h3>
+         <a href="playlist4.jsp" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="abt12.jpeg" alt="" />
+            <div>
+              <h3>William Davis</h3>
+              <span>23-10-2023</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="thumb-6.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">complete SASS tutorial</h3>
+         <a href="playlist5.jsp" class="inline-btn">view playlist</a>
+      </div>
+
+   </div>
+
+</section>
+
+<footer class="footer">
+    &copy; copyright @ 2023 by <span>Learnova E-learning System</span> | all rights
+    reserved!
+  </footer>
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+   
+</body>
+</html>
